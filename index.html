@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skynet Cyber Services</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        // Function to calculate the total price
+        function calculateTotal() {
+            var quantity = document.getElementById('quantity').value;
+            var price = document.getElementById('price').value;
+            var total = quantity * price;
+            document.getElementById('total').value = total.toFixed(2); // Display total with 2 decimal places
+        }
+
+        // Add event listeners to automatically calculate total when quantity or price changes
+        window.onload = function() {
+            document.getElementById('quantity').addEventListener('input', calculateTotal);
+            document.getElementById('price').addEventListener('input', calculateTotal);
+        }
+    </script>
+</head>
+<body>
+
+    <form action="connect.php" method="POST">
+        <h2>Skynet Cyber Services</h2>
+        <!-- Date Input -->
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <!-- Time Input -->
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required><br><br>
+
+        <!-- Day of the Week Input -->
+        <label for="day">Day:</label>
+        <select id="day" name="day" required>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select><br><br>
+
+        <!-- Service Input -->
+        <label for="services">Services:</label>
+        <select id="services" name="services" required>
+            <option value="Photocopy">Photocopy</option>
+            <option value="Printing">Printing</option>
+            <option value="Typesetting">Typesetting</option>
+            <option value="Scanning">Scanning</option>
+            <option value="Movie">Movie</option>
+            <option value="Music">Music</option>
+            <option value="Wifi">Wifi</option>
+            <option value="Kuccps">Kuccps</option>
+            <option value="File Return">File Return</option>
+            <option value="CV">CV</option>
+            <option value="Nill Return">Nill Return</option>
+            <option value="Envelope">Envelope</option>
+            <option value="Full scape">Full scape</option>
+            <option value="NSSF Return">NSSF Return</option>
+            <option value="Series Movie">Series Movie</option>
+            <option value="Phone Charging">Phone Charging</option>
+            <option value="Water">Water</option>
+            <option value="HELB Compliant">HELB Compliant</option>
+            <option value="EACC Form">EACC Form</option>
+            <option value="KRA">KRA</option>
+            <option value="Driving License">Driving License</option>
+            <option value="Email Account Opening">Email Account Opening</option>
+            <option value="Ecitizen Services">Ecitizen Services</option>
+            <option value="ID Form">ID Form</option>
+            <option value="Birth Application Form">Birth Application Form</option>
+            <option value="HELB">HELB</option>
+            <option value="CRB Certificate">CRB Certificate</option>
+            <option value="RBA">RBA</option>
+            <option value="Sells Agreement">Sells Agreement</option>
+            <option value="Letter of Chief">Letter of Chief</option>
+            <option value="Proffile PSC PA Portal">Proffile PSC PA Portal</option>
+            <option value="P3 Form">P3 Form</option>
+            <option value="Police Abstruct Form">Police Abstruct Form</option>
+            <option value="Full Photo">Full Photo</option>
+            <option value="Passport Photo">Passport Photo</option>
+            <option value="Tshirt Printing">Tshirt Printing</option>
+            <option value="Binding">Binding</option>
+            <option value="Lamination">Lamination</option>
+            <option value="Business Card">Business Card</option>
+            <option value="Fund Raising Card">Fund Raising Card</option>
+            <option value="Student ID Card">Student ID Card</option>
+            <option value="Windows and office installations">Windows and office installations</option>
+            <option value="Driver Updates">Driver Updates</option>
+            <option value="Facebook Account Opening">Facebook Account Opening</option>
+            <option value="MPESA Statement">MPESA Statement</option>
+        </select><br><br>
+
+        <!-- Quantity Input -->
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+
+        <!-- Price Input (in KES) -->
+        <label for="price">Price (in KES):</label>
+        <input type="number" id="price" name="price" min="0" step="0.01" required><br><br>
+
+        <!-- Total Price Textbox -->
+        <label for="total">Total Price (in KES):</label>
+        <input type="text" id="total" name="total" readonly><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+        <center><a href="login.html">Logout</a></center>
+    </form>
+
+</body>
+</html>
